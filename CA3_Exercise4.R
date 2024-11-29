@@ -162,3 +162,16 @@ nll_lm <- function(par, data, ...) {
 residauls <- nll_lm(results$par, df)$residuals
 
 sqrt(var(residuals))/sqrt(length(df$y))
+
+
+#New Code - Question 4
+
+model <- lm(y ~ x1 + x2 + x3, data = df)
+
+beta <- model$coefficients
+
+print(beta)
+
+sigma <- sqrt(var(model$residuals))
+
+print(sigma)
